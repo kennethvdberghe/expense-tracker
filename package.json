@@ -15,7 +15,8 @@
     "start:mocks": "cross-env NODE_ENV=production node --require ./mocks --require dotenv/config ./build/server.js",
     "test": "vitest",
     "typecheck": "tsc",
-    "validate": "run-p \"test -- --run\" lint typecheck"
+    "validate": "run-p \"test -- --run\" lint typecheck",
+    "proxy": "fly proxy 15432:5432 --app expense-tracker-c026-db"
   },
   "prettier": {},
   "eslintIgnore": [
